@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerRow1Zone1
+  - PlayerRow1Zone2
+  - PlayerRow1Zone3
+  - PlayerRow1Zone4
+  - PlayerRow1Zone5
+  - PlayerRow1Zone6
+  - PlayerRow2Zone1
+  - PlayerRow2Zone2
+  - PlayerRow2Zone3
+  - PlayerRow2Zone4
+  - PlayerRow2Zone5
+  - PlayerRow2Zone6
+  - PlayerRow3Zone1
+  - PlayerRow3Zone2
+  - PlayerRow3Zone3
+  - PlayerRow3Zone4
+  - PlayerRow3Zone5
+  - PlayerRow3Zone6
+  - PlayerRow4Zone1
+  - PlayerRow4Zone2
+  - PlayerRow4Zone3
+  - PlayerRow4Zone4
+  - PlayerRow4Zone5
+  - PlayerRow4Zone6
+  - PlayerRow5Zone1
+  - PlayerRow5Zone2
+  - PlayerRow5Zone3
+  - PlayerRow5Zone4
+  - PlayerRow5Zone5
+  - PlayerRow5Zone6
+  - Model
+  - Top
+  - Bottom
+  - Shoes
+  - Accessory
+  - FierceAndSabotageZone
+  - SearchPlayerHand
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Cards
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
