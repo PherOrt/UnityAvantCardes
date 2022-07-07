@@ -173,6 +173,7 @@ public class Game : MonoBehaviour
         }
         if(SearchForCardSelected == true)
         {
+            Debug.Log("The name of the Searched card is: " + SearchCardSelected.name);
             string CardNumString = SearchCardSelected.name.Replace("(Clone", "");
             int CardNumInt; 
             int.TryParse(CardNumString, out CardNumInt);
@@ -197,20 +198,28 @@ public class Game : MonoBehaviour
                     Destroy(SearchCardSelected);
                 }
             } 
-             
-            int deck = CardsInGame.DeckSearchCards.Count;
+             foreach (Transform child in SearchForACard.transform){
+                GameObject.Destroy(child.gameObject);
+             }
+            // int deck = CardsInGame.DeckSearchCards.Count;
             
-                    for(var k = 0; k < deck; k++){
-                        while(0 < CardsInGame.DeckSearchCards.Count){
-                        GameObject card7 = GameObject.Find(k.ToString());
-                        Debug.Log("Name of the card being destroyed: " + card7);
-                        Debug.Log("Number of cards in DeckSearch List: "+ CardsInGame.DeckSearchCards.Count);
-                        Destroy(card7);
-                        CardsInGame.DeckSearchCards.Remove(CardsInGame.DeckSearchCards[0]);
-                        break;
+            //         for(var k = 0; k < deck; k++){
+            //             while(0 < CardsInGame.DeckSearchCards.Count){
+            //                 Debug.Log("The name of the card at: " + CardsInGame.DeckSearchCards[0].name);
+            //                 //Debug.Log("The first card in players deck is: " + CardsInGame.RandomizedPlayerDeck[0].name);
+                        
+            //             int index = CardsInGame.RandomizedPlayerDeck.IndexOf(CardsInGame.DeckSearchCards[0]);
+            //             GameObject card7 = GameObject.Find();
+                        
+            //             Debug.Log("The index for the first card in hand is:  " + index);
+            //             Debug.Log("Name of the card being destroyed: " + card7);
+            //             Debug.Log("Number of cards in DeckSearch List: "+ CardsInGame.DeckSearchCards.Count);
+            //             Destroy(card7);
+            //             CardsInGame.DeckSearchCards.Remove(CardsInGame.DeckSearchCards[0]);
+            //             break;
                          
-                    } 
-                }
+            //         } 
+            //     }
                     
             SearchForCardSelected = false;
             searchForCard =false;
@@ -243,10 +252,12 @@ public class Game : MonoBehaviour
             
                 for (var i = 0; i < CardsInGame.RandomizedPlayerDeck.Count; i++)
                 {
+                    if(CardsInGame.RandomizedPlayerDeck[i].tag == "Top"){
                 GameObject TestDeckCard = Instantiate(CardsInGame.RandomizedPlayerDeck[i], new Vector3(0, 0, 0), Quaternion.identity);
                 TestDeckCard.name = i.ToString();
                 TestDeckCard.transform.SetParent(SearchForACard.transform, false);
                 CardsInGame.DeckSearchCards.Add(CardsInGame.RandomizedPlayerDeck[i]);
+                    }
                 }
         }
 

@@ -7,7 +7,7 @@ public class DragDrop : MonoBehaviour
 {
     public bool isDragging = false;
     private bool isDraggable = true;
-    private bool debugBoardSpots = true; //change to true to see targeting of board zones
+    private bool debugBoardSpots = false; //change to true to see targeting of board zones
     
 
 
